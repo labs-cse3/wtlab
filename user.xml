@@ -1,0 +1,15 @@
+<users>
+    <user>
+        <userId>1</userId>
+        <name>John Doe</name>
+        <email>john@example.com</email>
+        <age>25</age>
+    </user>
+    <user>
+        <userId>2</userId>
+        <name>Jane Smith</name>
+        <email>jane@example.com</email>
+        <age>30</age>
+    </user>
+    <!-- Add information for more users as needed -->
+</users>

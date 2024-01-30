@@ -1,0 +1,20 @@
+<script>
+    function v() {
+        var x = prompt("enter number of elements");
+        a = new Array(x);
+        for (var i = 0; i < x; i++) {
+            a[i] = parseInt(prompt("enter number"));
+        }
+        document.getElementById("p").innerHTML = "array is " + a;
+    }
+    function s() {
+        a.sort(function (a, b) { return b - a });
+        document.getElementById("p1").innerHTML = "sorted array is " + a;
+    }
+</script>
+
+<body onload="v()">
+    <p id="p"></p><br>
+    <p id="p1"></p><br>
+    <button type="button" onclick="s()">sort</button>
+</body>

@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    function Checkcity(val) {
+        if (val == "India")
+            document.getElementById("res").innerHTML = "Delhi";
+        if (val == "china")
+            document.getElementById("res").innerHTML = "Hongkong";
+        if (val == "Germany")
+            document.getElementById("res").innerHTML = "berlin";
+        if (val == "US")
+            document.getElementById("res").innerHTML = "New York";
+        if (val == "France")
+            document.getElementById("res").innerHTML = "paris";
+    }
+</script>
+
+<body>
+    <select name="city" onchange='Checkcity(this.value);'>
+        <option>Select a city</option>
+        <option value="India">India</option>
+        <option value="china">China</option>
+        <option value="Germany">Germany</option>
+        <option value="US">US</option>
+        <option value="France">France</option>
+    </select>
+    <font color="blue">
+        <p id="res"> </p>
+    </font>
+</body>

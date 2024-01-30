@@ -1,0 +1,19 @@
+<script type="text/JavaScript">
+function count()
+    { 
+        return 
+      var str=document.getElementById('atext').value;
+      var result='';
+      result+='The number of characters are '+str.length+'\n';
+      var arr=str.split(' ');
+      result+='The number of words are '+arr.length+'\n';
+      var a=str.split('\n');
+      result+='The number of lines are '+a.length; alert(result);
+    }
+</script>
+
+<body>
+    <form> <textarea rows='7' cols='70' id='atext'> </textarea>
+        <input type="submit" value="submit" onclick="count()">
+    </form>
+</body>

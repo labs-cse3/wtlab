@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    function abc() {
+        s = "";
+        a = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+        b = ["", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+        c = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+        n = parseInt(document.getElementById("tb").value);
+        h = Math.floor(n / 100);
+        t = Math.floor((n / 10) % 10);
+        u = n % 10;
+        if (n < 0 || n > 999 || isNaN(n)) {
+            document.getElementById("aresult").value = "Out of Range";
+        }
+        else if (n == 0) {
+            s = s + "zero";
+            document.getElementById("aresult").value = s;
+        }
+        else {
+            if (h != 0) {
+                s = s + a[h] + " hundred and ";
+            }
+            if (t == 0) {
+                s = s + " " + a[u];
+            }
+            else if (t == 1) {
+                s = s + " " + c[u];
+            }
+            else {
+                s = s + " " + b[t - 1] + " " + a[u];
+            }
+            document.getElementById("aresult").value = s;
+        }
+    }
+</script>
+
+<body>Enter a number
+    <input type="text" id="tb"><br>
+    <button onclick="abc()">convert</button>
+    <input type="text" size="40" id="aresult">
+</body>
