@@ -1,19 +1,29 @@
-<script type="text/JavaScript">
-function count()
-    { 
-        return 
-      var str=document.getElementById('atext').value;
-      var result='';
-      result+='The number of characters are '+str.length+'\n';
-      var arr=str.split(' ');
-      result+='The number of words are '+arr.length+'\n';
-      var a=str.split('\n');
-      result+='The number of lines are '+a.length; alert(result);
-    }
-</script>
-
+<!DOCTYPE html>
+<html>
+<head>
+<title>Character, Word, and Line Counter</title>
+</head>
 <body>
-    <form> <textarea rows='7' cols='70' id='atext'> </textarea>
-        <input type="submit" value="submit" onclick="count()">
-    </form>
+  <h1>Enter your text:</h1>
+  <textarea id="textInput" rows="10" cols="50"></textarea>
+  <br>
+  <button onclick="countText()">Count</button>
+
+  <script>
+    function countText() {
+      const text = document.getElementById("textInput").value;
+
+      // Count characters
+      const characterCount = text.length;
+
+      // Count words (separated by whitespace)
+      const wordCount = text.trim().split(/\s+/).length;
+
+      // Count lines (separated by newline characters)
+      const lineCount = text.split(/\r?\n/).length;
+
+      alert(`Characters: ${characterCount}\nWords: ${wordCount}\nLines: ${lineCount}`);
+    }
+  </script>
 </body>
+</html>
