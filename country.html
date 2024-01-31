@@ -1,21 +1,22 @@
 <script type="text/javascript">
     function Checkcity(val) {
         if (val == "India")
-            document.getElementById("res").innerHTML = "Delhi";
+            document.getElementById("res").innerHTML = " capital of the country is: Delhi";
         if (val == "china")
-            document.getElementById("res").innerHTML = "Hongkong";
+            document.getElementById("res").innerHTML = " capital of the country is:Hongkong";
         if (val == "Germany")
-            document.getElementById("res").innerHTML = "berlin";
+            document.getElementById("res").innerHTML = " capital of the country is:berlin";
         if (val == "US")
-            document.getElementById("res").innerHTML = "New York";
+            document.getElementById("res").innerHTML = " capital of the country is:New York";
         if (val == "France")
-            document.getElementById("res").innerHTML = "paris";
+            document.getElementById("res").innerHTML = " capital of the country is:paris";
     }
 </script>
 
 <body>
+    <h2>Please select a country</h2>
     <select name="city" onchange='Checkcity(this.value);'>
-        <option>Select a city</option>
+        <option>Select a country</option>
         <option value="India">India</option>
         <option value="china">China</option>
         <option value="Germany">Germany</option>
@@ -23,6 +24,6 @@
         <option value="France">France</option>
     </select>
     <font color="blue">
-        <p id="res"> </p>
+        <p id="res">capital of the country is: </p>
     </font>
 </body>
